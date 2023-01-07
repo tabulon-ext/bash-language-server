@@ -1,7 +1,8 @@
 # Bash Language Server
 
-Bash language server implementation based on [Tree Sitter][tree-sitter] and its [grammar for Bash][tree-sitter-bash]
-with [explainshell][explainshell] integration.
+Bash language server implementation based on [Tree Sitter][tree-sitter] and its [grammar for Bash][tree-sitter-bash] and supports [explainshell][explainshell] and [shellcheck][shellcheck].
+
+We strongly recommend that you install [shellcheck][shellcheck] to enable linting: https://github.com/koalaman/shellcheck#installing
 
 ## Features
 
@@ -21,7 +22,13 @@ with [explainshell][explainshell] integration.
 npm i -g bash-language-server
 ```
 
-If you encounter installation errors, ensure you have node version 8 or newer (`node --version`).
+On Fedora based distros:
+
+```bash
+dnf install -y nodejs-bash-language-server
+```
+
+If you encounter installation errors, ensure you have node version 12 or newer (`node --version`).
 
 ### Clients
 
@@ -135,6 +142,7 @@ Please see [docs/development-guide][dev-guide] for more information.
 [ide-bash]: https://atom.io/packages/ide-bash
 [sublime-text-lsp]: https://packagecontrol.io/packages/LSP-bash
 [explainshell]: https://explainshell.com/
+[shellcheck]: https://www.shellcheck.net/
 [languageclient-neovim]: https://github.com/autozimu/LanguageClient-neovim
 [nvim-lspconfig]: https://github.com/neovim/nvim-lspconfig
 [vim-lsp]: https://github.com/prabirshrestha/vim-lsp
